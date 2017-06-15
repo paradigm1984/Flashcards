@@ -1,5 +1,6 @@
 DS_Store
 node_modules
+index.js
 
 # Logs
 logs
@@ -60,3 +61,5 @@ typings/
 # dotenv environment variables file
 .env
 
+BasicCard.js
+ClozeCard.js

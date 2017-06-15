@@ -24,70 +24,6 @@ var playerCard;
 var count = 0;
 
 
-// ================================== LOGIC =================================== //
-
-// this function will run the menu when the application is run
-function openMenu() {
-
-	// the inquirer.prompt function will display this array to the user which is the menu.
-	inquirer.prompt([
-	{
-		type: "list",
-		message: "\n Please choose an option from the list below...",
-		choices: ["Create", "Use All", "Random", "Shuffle", "Show All", "Exit"],
-		name: "menuOptions",
-	}	
-	]).then(function(answer) { // waits to take the answer of the user with the .then.
-		var waitMessage;
-
-		// switch case to grab what the user has input.
-		switch (answer.menuOptions) {
-
-			case "Create":
-				console.log("Ok, lets make a new flashcard!");
-				// run the createCard function on a timer
-				waitMessage = setTimeout(createCard, 1000);
-				break;
-
-			case "Use All":
-				console.log("Ok, lets run through the deck.");
-				// run the askQuestions function on a timer
-				waitMessage = setTimeout(askQuestions, 1000);
-				break;
-
-			case "Random":
-				console.log("Ok, I'll pick one random card from the deck.");
-				// run the randomCard function on a timer
-				waitMessage = setTimeout(randomCard, 1000);	
-				break;
-
-			case "Shuffle":
-				console.log("Ok, I'll shuffle all of the cards in the deck.");
-				// run the shuffleDeck function on a timer
-				waitMessage = setTimeout(shuffleDeck, 1000);
-				break;
-
-			case "Show All":
-				console.log("Ok, I'll print all from the cards in the deck to your screen.");
-				// run the showCards function on a timer
-				waitMessage = setTimeout(showCards, 1000);	
-				break;
-
-			case "Exit":
-				console.log("Thank you for using flashcard generator. Please come again!");
-				// return nothing
-				return;
-				break;					
-		}
-	});
-}
-
-// run the open menu function so that it runs as soon as the 
-//program starts
-openMenu();
-
-// ================================= FUNCTIONS ================================== //
-
 
 function createCard() {
 
@@ -125,14 +61,14 @@ function createCard() {
 				]).then(function (cardData) { // after that is run, take the 
 
 					// builds an object with the front and back info once it grabs the user input
-					var cardObj = {            
+					var basicObj = {            
 						type:"BasicCard",
 						front: cardData.front,
 						back: cardData.back
 					};
 
 				// pushes the new card object to the JSON file called "./cardLibrary.json"
-				library.push(cardObj);  
+				library.push(basicObj);  
 				fs.writeFile("cardLibrary.json", JSON.stringify(library, null, 2));
 
 				// once it grabs the first card and puts it into an array it asks the user if they want to
@@ -171,14 +107,14 @@ function createCard() {
 				}
 				]).then(function(cardData) {
 
-					var cardObj = {            
+					var clozeObj = {            
 						type:"ClozeCard",
 						front: cardData.text,
 						back: cardData.cloze
 					};
 
 					
-                    library.push(cardObj);							
+                    library.push(clozeObj);							
                     fs.writeFile("cardLibrary.json", JSON.stringify(library, null, 2)); 
                 	
                     inquirer.prompt([
@@ -200,10 +136,6 @@ function createCard() {
 			}
 
 		});
-};
-
-
-
-
-
+}
+createCard();
 
