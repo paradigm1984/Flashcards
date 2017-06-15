@@ -1,12 +1,22 @@
 [
-	{
-		"type": "BasicCard",
-		"front": "Who was the 16th president of the United States?",
-		"back": "Abraham Lincoln"
-	},
-	{
-		"type": "ClozeCard",
-		"front": "A group of crows is called a murder of crows",
-		"back": "murder"
-	}
+  {
+    "type": "BasicCard",
+    "front": "Who was the 16th president of the United States?",
+    "back": "Abraham Lincoln"
+  },
+  {
+    "type": "ClozeCard",
+    "front": "A group of crows is called a murder of crows",
+    "back": "murder"
+  },
+  {
+    "type": "BasicCard",
+    "front": "What is the statue of liberty made out of?",
+    "back": "bronze."
+  },
+  {
+    "type": "ClozeCard",
+    "front": "The symbol for gold on the periodic table is Au",
+    "back": "Au"
+  }
 ]

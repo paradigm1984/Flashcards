@@ -89,7 +89,6 @@ openMenu();
 // ================================= FUNCTIONS ================================== //
 
 
-
 function createCard() {
 
 	// prompts the user for the type of card they want to make
