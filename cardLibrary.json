@@ -1,0 +1,12 @@
+[
+	{
+		"type": "BasicCard",
+		"front": "Who was the 16th president of the United States?",
+		"back": "Abraham Lincoln"
+	},
+	{
+		"type": "ClozeCard",
+		"front": "A group of crows is called a murder of crows",
+		"back": "murder"
+	}
+]
