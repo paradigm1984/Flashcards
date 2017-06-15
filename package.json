@@ -1,0 +1,17 @@
+{
+  "name": "flashcards",
+  "version": "1.0.0",
+  "description": "flashcard application",
+  "main": "index.js",
+  "scripts": {
+    "test": "testing 1 2"
+  },
+  "keywords": [
+    "flashcards"
+  ],
+  "author": "blancooo",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "colors": "^1.1.2"
+  }
+}
