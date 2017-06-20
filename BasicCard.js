@@ -1,3 +1,4 @@
+
 // Constructor function for the Basic Card.
 function BasicCard(front, back) {
     this.front = front;

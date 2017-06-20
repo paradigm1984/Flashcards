@@ -1,6 +1,7 @@
 
 // Constructor function for the Cloze Card.
 function ClozeCard(text, cloze) {
+	// text.split to take out the cloze section
     this.text = text.split(cloze);
     this.cloze = cloze;
 
@@ -10,7 +11,10 @@ function ClozeCard(text, cloze) {
 function ClozeCardPrototype() {
 
     this.clozeRemoved = function () {
-        return `${this.text[0]} ... ${this.text[1]}`;  //Template literal enclosed by the back-tick ` allows embedded expressions wrapped with ${}
+
+    	// template literals allow you to seperate sections of text and call them by array values
+    	// this allows it to return the close but replaces the word with the cloze variable with ...
+        return `${this.text[0]} ... ${this.text[1]}`;  
     };											
 };
 

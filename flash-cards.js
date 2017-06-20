@@ -1,7 +1,3 @@
-// https://github.com/jasonboru/Flashcard-Generator
-
-// ============================== VARIABLES =============================== //
-
 
 // including the inquirer package. This package allows you to add
 // prompts in your terminal.
@@ -16,14 +12,6 @@ var BasicCard = require("./BasicCard.js");
 var ClozeCard = require("./ClozeCard.js");
 
 var library = require("./cardLibrary.json");
-var colors = require("colors");
-
-
-var drawnCard;
-var playerCard;
-var count = 0;
-
-
 
 function createCard() {
 
@@ -137,5 +125,6 @@ function createCard() {
 
 		});
 }
+
 createCard();
 
